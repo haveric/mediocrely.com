@@ -1,0 +1,24 @@
+.cta-link {
+    font-family: Furore;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 128px;
+    height: 45px;
+    padding-top: 15px;
+}
+
+.cta-link:hover {
+    opacity: .8;
+}
+
+.cta-link,
+.cta-link.primary {
+    background-image: url('http://localhost:1337/uploads/button_orange_ef9209ae12.png');
+}
+
+.cta-link.secondary {
+    background-image: url('http://localhost:1337/uploads/button_green_60144554ff.png');
+}

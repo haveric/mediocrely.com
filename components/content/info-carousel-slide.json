@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_content_info_carousel_slides",
+  "info": {
+    "name": "InfoCarouselSlide",
+    "icon": "arrows-alt"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "carouselImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.cta-link"
+    },
+    "ctaRightOffset": {
+      "type": "integer"
+    }
+  }
+}

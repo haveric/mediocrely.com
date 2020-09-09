@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedules",
+  "info": {
+    "name": "schedule"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "streamer": {
+      "model": "streamer"
+    },
+    "timeSlots": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.time-slot"
+    },
+    "name": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

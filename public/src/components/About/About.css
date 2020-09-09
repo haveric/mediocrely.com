@@ -1,0 +1,34 @@
+.about {
+    background-image: url("http://localhost:1337/uploads/dotted_grid_e3044b346b.png");
+    background-repeat: repeat;
+    padding: 45px 0;
+}
+
+.about__split {
+    width: 48.14814814814815%;
+    padding-left: 0.92592592592593%;
+    padding-right: 0.92592592592593%;
+    float: left;
+}
+
+.about__title {
+    font-family: Furore;
+    font-size: 24px;
+    font-weight: normal;
+    color: #1a4d6c;
+    margin: 0;
+}
+
+.about__text {
+    font-family: Cantarell;
+    font-size: 17px;
+    color: #000;
+}
+
+.about__text p:first-child {
+    margin-top: 0;
+}
+
+.about__text strong {
+    color: #82c340;
+}

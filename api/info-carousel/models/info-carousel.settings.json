@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "info_carousels",
+  "info": {
+    "name": "InfoCarousel"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.info-carousel-slide"
+    }
+  }
+}

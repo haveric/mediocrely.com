@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "streamers",
+  "info": {
+    "name": "streamer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "bio": {
+      "type": "text"
+    },
+    "twitchHandle": {
+      "type": "string"
+    }
+  }
+}

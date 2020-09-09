@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_content_time_slots",
+  "info": {
+    "name": "timeSlot",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "start": {
+      "type": "datetime",
+      "default": "2020-11-07T18:00:00.000Z"
+    },
+    "end": {
+      "type": "datetime",
+      "default": "2020-11-07T18:00:00.000Z"
+    },
+    "game": {
+      "model": "game"
+    },
+    "displayTitle": {
+      "type": "string"
+    }
+  }
+}

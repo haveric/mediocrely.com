@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_cta_links",
+  "info": {
+    "name": "CTALink",
+    "icon": "bullhorn"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}
