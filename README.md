@@ -1,0 +1,1 @@
+# mediocrely.com
