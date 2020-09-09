@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getUserInfo } from 'extra-life-api';
-import ReactTwitchEmbedVideo from "react-twitch-embed-video"
+//import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 import { CTALink } from '../CTALink/CTALink';
 
 class Member extends React.Component {
@@ -57,7 +57,7 @@ class Member extends React.Component {
           </div>
           <div className="member__inplay">
               <div className={"twitchembed-" + streamer.twitchHandle}/>
-            {
+            {/*
               <ReactTwitchEmbedVideo
                   channel={streamer.twitchHandle}
                   layout="video"
@@ -65,7 +65,7 @@ class Member extends React.Component {
                   height="219px"
                   muted={true}
                   targetId={"twitchembed-" + streamer.twitchHandle}
-              />
+              />*/
             }
           </div>
       </div>
