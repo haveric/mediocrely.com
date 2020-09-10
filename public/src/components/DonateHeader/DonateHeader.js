@@ -22,7 +22,7 @@ export class DonateHeader extends Component {
                         />
                     </div>
 
-                    <div className="donate-header__text"><img src={process.env.RAZZLE_RUNTIME_API_URL + '/uploads/icon_star_22d28033f9.png'} alt=""/> {event.start ? DateUtils.getFormattedStartTime(event.start) : ''} <img src={process.env.RAZZLE_RUNTIME_API_URL + 'http://localhost:1337/uploads/icon_star_22d28033f9.png'} alt=""/></div>
+                    <div className="donate-header__text"><img src={process.env.RAZZLE_RUNTIME_API_URL + '/uploads/icon_star_22d28033f9.png'} alt=""/> {event.start ? DateUtils.getFormattedStartTime(event.start) : ''} <img src={process.env.RAZZLE_RUNTIME_API_URL + '/uploads/icon_star_22d28033f9.png'} alt=""/></div>
                 </Container>
             </div>
         );
