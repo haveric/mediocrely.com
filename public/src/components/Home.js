@@ -36,14 +36,15 @@ export class Home extends Component {
         schedules: response.data[0]['schedules']
       });
 
-      let streamers = [];
-      this.state.schedules.map(async schedule => {
+      const streamersPromises = this.state.schedules.map(async schedule => {
         const streamerResponse = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/streamers?id=' + schedule.streamer);
-        streamers.push(streamerResponse.data[0]);
 
-        this.setState({
-          streamers: streamers
-        })
+        return streamerResponse.data[0];
+      })
+
+      const streamers = await Promise.all(streamersPromises);
+      this.setState({
+        streamers: streamers
       })
     } catch (error) {
       this.state.error = error;
