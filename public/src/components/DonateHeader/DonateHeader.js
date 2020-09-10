@@ -4,8 +4,6 @@ import { CTALink } from '../CTALink/CTALink';
 import './DonateHeader.css';
 import DateUtils from "../../utils/DateUtil";
 import PropTypes from "prop-types";
-import Member from "../Members/Member";
-import Schedule from "../Schedule/Schedule";
 
 export class DonateHeader extends Component {
     render() {
