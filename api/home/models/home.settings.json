@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "name": "Home"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "info_carousel": {
+      "model": "info-carousel"
+    },
+    "event": {
+      "model": "event"
+    }
+  }
+}

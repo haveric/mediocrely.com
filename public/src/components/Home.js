@@ -25,7 +25,12 @@ export class Home extends Component {
 
   componentDidMount = async () => {
     try {
-      const response = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/events?id=2');
+      const homeResponse = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/home');
+      this.setState({
+        infoCarousel: homeResponse.data.info_carousel
+      });
+
+      const response = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/events?id=' + homeResponse.data.event.id);
       this.setState({
         event: response.data[0],
         schedules: response.data[0]['schedules']
@@ -40,15 +45,6 @@ export class Home extends Component {
           streamers: streamers
         })
       );
-    } catch (error) {
-      this.state.error = error;
-    }
-
-    try {
-      const response = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/info-carousels?id=1');
-      this.setState({
-        infoCarousel: response.data[0]
-      });
     } catch (error) {
       this.state.error = error;
     }
