@@ -16,9 +16,9 @@
 
 .cta-link,
 .cta-link.primary {
-    background-image: url('http://localhost:1337/uploads/button_orange_ef9209ae12.png');
+    background-image: url('/img/button_orange.png');
 }
 
 .cta-link.secondary {
-    background-image: url('http://localhost:1337/uploads/button_green_60144554ff.png');
+    background-image: url('/img/button_green.png');
 }

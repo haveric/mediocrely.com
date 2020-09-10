@@ -26,7 +26,7 @@ export class InfoCarousel extends Component {
             {
               slides.map(slide => (
                 <a href={slide.link} className="info-carousel__slide" key={slide.id}>
-                  <img src={"http://localhost:1337" + slide.carouselImage.url} alt="" />
+                  <img src={process.env.RAZZLE_RUNTIME_API_URL + slide.carouselImage.url} alt="" />
                   <div>{slide.ctaStyle ? slide.ctaStyle : ""}</div>
                   <div className="info-carousel__slide-cta" style={{right: slide.ctaRightOffset ? slide.ctaRightOffset : 0}}>
                     <CTALink

@@ -25,7 +25,7 @@ export class Home extends Component {
 
   componentDidMount = async () => {
     try {
-      const response = await axios.get('http://localhost:1337/events?id=2');
+      const response = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/events?id=2');
       this.setState({
         event: response.data[0],
         schedules: response.data[0]['schedules']
@@ -33,7 +33,7 @@ export class Home extends Component {
 
       let streamers = [];
       this.state.schedules.map(async schedule => {
-        const streamerResponse = await axios.get('http://localhost:1337/streamers?id=' + schedule.streamer);
+        const streamerResponse = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/streamers?id=' + schedule.streamer);
         streamers.push(streamerResponse.data[0]);
       }).then(
         this.setState({
@@ -45,7 +45,7 @@ export class Home extends Component {
     }
 
     try {
-      const response = await axios.get('http://localhost:1337/info-carousels?id=1');
+      const response = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/info-carousels?id=1');
       this.setState({
         infoCarousel: response.data[0]
       });

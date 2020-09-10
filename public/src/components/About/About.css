@@ -1,5 +1,5 @@
 .about {
-    background-image: url("http://localhost:1337/uploads/dotted_grid_e3044b346b.png");
+    background-image: url("/img/dotted_grid.png");
     background-repeat: repeat;
     padding: 45px 0;
 }

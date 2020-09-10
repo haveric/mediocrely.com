@@ -36,7 +36,7 @@ class Member extends React.Component {
 
     return (
       <div className="member clearfix">
-          <div className="member__icon"><img src={"http://localhost:1337" + streamer.avatar.url} alt={streamer.name} /></div>
+          <div className="member__icon"><img src={process.env.RAZZLE_RUNTIME_API_URL + streamer.avatar.url} alt={streamer.name} /></div>
           <div className="member__details">
               <h3 className="member__name">{streamer.fullName}</h3>
               <p className="member__bio">{streamer.bio}</p>
