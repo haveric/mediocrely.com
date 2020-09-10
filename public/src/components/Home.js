@@ -40,11 +40,11 @@ export class Home extends Component {
       this.state.schedules.map(async schedule => {
         const streamerResponse = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/streamers?id=' + schedule.streamer);
         streamers.push(streamerResponse.data[0]);
-      }).then(
+
         this.setState({
           streamers: streamers
         })
-      );
+      })
     } catch (error) {
       this.state.error = error;
     }
