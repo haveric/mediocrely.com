@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_component_abouts",
+  "info": {
+    "name": "About",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "primary": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.title-text"
+    },
+    "secondary": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.title-text"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_title_texts",
+  "info": {
+    "name": "titleText",
+    "icon": "text-height"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

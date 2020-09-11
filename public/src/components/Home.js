@@ -19,6 +19,7 @@ export class Home extends Component {
       schedules: [],
       streamers: undefined,
       infoCarousel: undefined,
+      about: undefined,
       error: null
     };
   }
@@ -27,7 +28,8 @@ export class Home extends Component {
     try {
       const homeResponse = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/home');
       this.setState({
-        infoCarousel: homeResponse.data.info_carousel
+        infoCarousel: homeResponse.data.info_carousel,
+        about: homeResponse.data.about
       });
 
       const response = await axios.get(process.env.RAZZLE_RUNTIME_API_URL + '/events?id=' + homeResponse.data.event.id);
@@ -64,7 +66,14 @@ export class Home extends Component {
             />
             : ""
           }
-          <About />
+          {this.state.about !== undefined ?
+            <About
+                key={"About-" + this.state.about.id}
+                primary={this.state.about.primary}
+                secondary={this.state.about.secondary}
+            />
+            : ""
+          }
           {this.state.event !== undefined ?
             <DonateHeader
               key="DonateHeader-1"
