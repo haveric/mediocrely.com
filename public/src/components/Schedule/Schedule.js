@@ -96,7 +96,13 @@ export class Schedule extends React.Component {
                   <div className="schedule__heading">{streamers.length > index ? streamers[index].firstName : ''}</div>
                   <div className="schedule__inplay">
                       <a className="schedule__watch-link" href={"https://www.twitch.tv/" + (streamers.length > index ? streamers[index].twitchHandle : '')}><img src={process.env.RAZZLE_RUNTIME_API_URL + '/uploads/watch_d933c1ba52.png'} alt="Watch"/></a>
-                      <a className="schedule__donate-link" href={"https://www.extra-life.org/index.cfm?fuseaction=donordrive.participant&participantID=" + (streamers.length > index ? streamers[index].extraLifeUserId : '')}><img src={process.env.RAZZLE_RUNTIME_API_URL + '/uploads/donate_23ec62920b.png'} alt="Donate"/></a>
+                      {
+                          streamers.length > index ? streamers[index].extraLifeUserId ?
+                              <a className="schedule__donate-link" href={"https://www.extra-life.org/index.cfm?fuseaction=donordrive.participant&participantID=" + (streamers.length > index ? streamers[index].extraLifeUserId : '')}>
+                                  <img src={process.env.RAZZLE_RUNTIME_API_URL + '/uploads/donate_23ec62920b.png'} alt="Donate"/>
+                              </a>
+                          : '' : ''
+                      }
                   </div>
                   {
                     schedule['timeSlots'].map((timeSlot, index) => (

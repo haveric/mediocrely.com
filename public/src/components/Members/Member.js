@@ -40,24 +40,27 @@ class Member extends React.Component {
           <div className="member__details">
               <h3 className="member__name">{streamer.fullName}</h3>
               <p className="member__bio">{streamer.bio}</p>
-              <div className="member__donations">
-                  <span className="member__donation-raised">
-                      {this.state.sumDonations} USD Raised
-                  </span>
-                  <span className="member__donation-num">
-                      {this.state.numDonations} Donations Received
-                  </span>
-                  <div className="member__donate">
-                      <CTALink
-                          link={"https://www.extra-life.org/index.cfm?fuseaction=donordrive.participant&participantID=" + streamer.extraLifeUserId}
-                          title='Donate'
-                      />
-                  </div>
-              </div>
+              {
+                  this.props.streamer.extraLifeUserId ?
+                      <div className="member__donations">
+                          <span className="member__donation-raised">
+                              {this.state.sumDonations} USD Raised
+                          </span>
+                          <span className="member__donation-num">
+                              {this.state.numDonations} Donations Received
+                          </span>
+                          <div className="member__donate">
+                              <CTALink
+                                  link={"https://www.extra-life.org/index.cfm?fuseaction=donordrive.participant&participantID=" + streamer.extraLifeUserId}
+                                  title='Donate'
+                              />
+                          </div>
+                      </div>
+                  : ''
+              }
           </div>
           <div className="member__inplay">
               <div className={"twitchembed-" + streamer.twitchHandle}/>
-            {
                 <TwitchEmbed
                     channel={streamer.twitchHandle}
                     id={streamer.twitchHandle}
@@ -67,7 +70,6 @@ class Member extends React.Component {
                     withChat={false}
                     muted
                 />
-            }
           </div>
       </div>
     );
