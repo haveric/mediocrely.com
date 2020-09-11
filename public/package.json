@@ -13,7 +13,8 @@
     "razzle": "3.1.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-router-dom": "5.2.0"
+    "react-router-dom": "5.2.0",
+    "react-twitch-embed": "^2.1.0"
   },
   "devDependencies": {
     "axios": "^0.20.0",
@@ -21,7 +22,6 @@
     "prop-types": "^15.7.2",
     "razzle-plugin-scss": "^3.1.7",
     "react-slick": "^0.27.11",
-    "react-twitch-embed-video": "^2.0.4",
     "slick-carousel": "^1.8.1"
   }
 }
