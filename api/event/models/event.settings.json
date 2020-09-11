@@ -20,6 +20,9 @@
     },
     "end": {
       "type": "datetime"
+    },
+    "extraLifeTeamId": {
+      "type": "integer"
     }
   }
 }

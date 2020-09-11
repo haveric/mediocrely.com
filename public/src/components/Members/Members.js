@@ -15,19 +15,20 @@ export class Members extends React.Component {
   }
 
   componentDidMount() {
-    this.getDonationAmount();
+    const event = this.props.event;
+    if (event.extraLifeTeamId) {
+        this.getDonationAmount(event.extraLifeTeamId);
+    }
   }
 
-  getDonationAmount() {
-    /*
-    getTeamInfo(45491)
+  getDonationAmount(extraLifeTeamId) {
+    getTeamInfo(extraLifeTeamId)
       .then((data) => {
         this.setState({ donationAmount: data.sumDonations });
       })
       .catch(() => {
         // console.log(e);
       });
-     */
   }
 
   render() {
@@ -37,7 +38,11 @@ export class Members extends React.Component {
     return (
       <div id="members" className="members">
         <Container>
-            <h2 className="members__totalraised">Total Raised so far: ${this.state.donationAmount}</h2>
+            {
+                event.extraLifeTeamId ?
+                    <h2 className="members__totalraised">Total Raised so far: ${this.state.donationAmount}</h2>
+                : ''
+            }
             <h3 className="members__title">Team Mediocrely Members</h3>
 
             {
