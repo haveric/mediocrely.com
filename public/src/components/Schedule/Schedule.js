@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DateUtils from '../../utils/DateUtil';
 import { Container } from '../Base/Container';
-import './Schedule.css';
+import './Schedule.scss';
 
 export class Schedule extends React.Component {
   constructor(props) {

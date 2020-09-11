@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './CTALink.css';
+import './CTALink.scss';
 
 export class CTALink extends Component {
     render() {

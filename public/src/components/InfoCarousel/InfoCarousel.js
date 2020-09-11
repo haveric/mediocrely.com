@@ -5,7 +5,7 @@ import { CTALink } from '../CTALink/CTALink';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./InfoCarousel.css";
+import "./InfoCarousel.scss";
 
 export class InfoCarousel extends Component {
   render () {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from '../Base/Container';
 import { CTALink } from '../CTALink/CTALink';
-import './DonateHeader.css';
+import './DonateHeader.scss';
 import DateUtils from "../../utils/DateUtil";
 import PropTypes from "prop-types";
 

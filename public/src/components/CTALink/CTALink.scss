@@ -8,17 +8,17 @@
     width: 128px;
     height: 45px;
     padding-top: 15px;
-}
 
-.cta-link:hover {
-    opacity: .8;
-}
+    &:hover {
+        opacity: .8;
+    }
 
-.cta-link,
-.cta-link.primary {
-    background-image: url('/img/button_orange.png');
-}
+    &,
+    &.primary {
+        background-image: url('/img/button_orange.png');
+    }
 
-.cta-link.secondary {
-    background-image: url('/img/button_green.png');
+    &.secondary {
+        background-image: url('/img/button_green.png');
+    }
 }

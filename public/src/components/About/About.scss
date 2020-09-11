@@ -23,12 +23,12 @@
     font-family: Cantarell;
     font-size: 17px;
     color: #000;
-}
 
-.about__text p:first-child {
-    margin-top: 0;
-}
+    p:first-child {
+      margin-top: 0;
+    }
 
-.about__text strong {
-    color: #82c340;
+    strong {
+      color: #82c340;
+    }
 }

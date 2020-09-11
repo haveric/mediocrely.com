@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from '../Base/Container';
-import './Header.css';
+import './Header.scss';
 
 export class Header extends Component {
   render() {

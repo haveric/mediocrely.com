@@ -5,9 +5,9 @@ import { About } from './About/About';
 import { DonateHeader } from './DonateHeader/DonateHeader';
 import { Members } from './Members/Members';
 import { Schedule } from './Schedule/Schedule';
-import '../scss/Base.css';
-import '../scss/h5bp/normalize.css';
-import '../scss/h5bp/main.css';
+import '../scss/Base.scss';
+import '../scss/h5bp/normalize.scss';
+import '../scss/h5bp/main.scss';
 import axios from "axios";
 
 export class Home extends Component {

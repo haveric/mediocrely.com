@@ -2,7 +2,7 @@ import React from 'react';
 import { getTeamInfo } from 'extra-life-api';
 import { Container } from '../Base/Container';
 import Member from './Member';
-import './Members.css';
+import './Members.scss';
 import PropTypes from "prop-types";
 
 export class Members extends React.Component {

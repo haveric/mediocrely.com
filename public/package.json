@@ -19,6 +19,7 @@
     "axios": "^0.20.0",
     "extra-life-api": "^6.0.0",
     "prop-types": "^15.7.2",
+    "razzle-plugin-scss": "^3.1.7",
     "react-slick": "^0.27.11",
     "react-twitch-embed-video": "^2.0.4",
     "slick-carousel": "^1.8.1"
