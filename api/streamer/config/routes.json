@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/streamers",
+      "path": "/api/streamers",
       "handler": "streamer.find",
       "config": {
         "policies": []
@@ -10,7 +10,7 @@
     },
     {
       "method": "GET",
-      "path": "/streamers/count",
+      "path": "/api/streamers/count",
       "handler": "streamer.count",
       "config": {
         "policies": []
@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/streamers/:id",
+      "path": "/api/streamers/:id",
       "handler": "streamer.findOne",
       "config": {
         "policies": []
@@ -26,7 +26,7 @@
     },
     {
       "method": "POST",
-      "path": "/streamers",
+      "path": "/api/streamers",
       "handler": "streamer.create",
       "config": {
         "policies": []
@@ -34,7 +34,7 @@
     },
     {
       "method": "PUT",
-      "path": "/streamers/:id",
+      "path": "/api/streamers/:id",
       "handler": "streamer.update",
       "config": {
         "policies": []
@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/streamers/:id",
+      "path": "/api/streamers/:id",
       "handler": "streamer.delete",
       "config": {
         "policies": []

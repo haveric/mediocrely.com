@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/info-carousels",
+      "path": "/api/info-carousels",
       "handler": "info-carousel.find",
       "config": {
         "policies": []
@@ -10,7 +10,7 @@
     },
     {
       "method": "GET",
-      "path": "/info-carousels/count",
+      "path": "/api/info-carousels/count",
       "handler": "info-carousel.count",
       "config": {
         "policies": []
@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/info-carousels/:id",
+      "path": "/api/info-carousels/:id",
       "handler": "info-carousel.findOne",
       "config": {
         "policies": []
@@ -26,7 +26,7 @@
     },
     {
       "method": "POST",
-      "path": "/info-carousels",
+      "path": "/api/info-carousels",
       "handler": "info-carousel.create",
       "config": {
         "policies": []
@@ -34,7 +34,7 @@
     },
     {
       "method": "PUT",
-      "path": "/info-carousels/:id",
+      "path": "/api/info-carousels/:id",
       "handler": "info-carousel.update",
       "config": {
         "policies": []
@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/info-carousels/:id",
+      "path": "/api/info-carousels/:id",
       "handler": "info-carousel.delete",
       "config": {
         "policies": []

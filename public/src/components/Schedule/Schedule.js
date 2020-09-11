@@ -95,18 +95,18 @@ export class Schedule extends React.Component {
                 <div key={"schedule-" + index} className="schedule__col">
                   <div className="schedule__heading">{streamers.length > index ? streamers[index].firstName : ''}</div>
                   <div className="schedule__inplay">
-                      <a className="schedule__watch-link" href={"https://www.twitch.tv/" + (streamers.length > index ? streamers[index].twitchHandle : '')}><img src={process.env.RAZZLE_RUNTIME_API_URL + '/uploads/watch_d933c1ba52.png'} alt="Watch"/></a>
+                      <a className="schedule__watch-link" href={"https://www.twitch.tv/" + (streamers.length > index ? streamers[index].twitchHandle : '')}><img src={process.env.RAZZLE_RUNTIME_STRAPI_URL + '/uploads/watch_d933c1ba52.png'} alt="Watch"/></a>
                       {
                           streamers.length > index ? streamers[index].extraLifeUserId ?
                               <a className="schedule__donate-link" href={"https://www.extra-life.org/index.cfm?fuseaction=donordrive.participant&participantID=" + (streamers.length > index ? streamers[index].extraLifeUserId : '')}>
-                                  <img src={process.env.RAZZLE_RUNTIME_API_URL + '/uploads/donate_23ec62920b.png'} alt="Donate"/>
+                                  <img src={process.env.RAZZLE_RUNTIME_STRAPI_URL + '/uploads/donate_23ec62920b.png'} alt="Donate"/>
                               </a>
                           : '' : ''
                       }
                   </div>
                   {
                     schedule['timeSlots'].map((timeSlot, index) => (
-                      <div key={"timeSlot-" + index} className="schedule__game" style={{backgroundImage: 'url(' + process.env.RAZZLE_RUNTIME_API_URL + (timeSlot.game.image != null ? timeSlot.game.image.url : '/uploads/unknown_b0a896addf.png') + ')', height: getHeightBetween(timeSlot.start, timeSlot.end) + "px", '--height': getHeightBetweenMin(timeSlot.start, timeSlot.end) + "px", top: getAbsoluteTop(event.start, timeSlot.start)}}>
+                      <div key={"timeSlot-" + index} className="schedule__game" style={{backgroundImage: 'url(' + process.env.RAZZLE_RUNTIME_STRAPI_URL + (timeSlot.game.image != null ? timeSlot.game.image.url : '/uploads/unknown_b0a896addf.png') + ')', height: getHeightBetween(timeSlot.start, timeSlot.end) + "px", '--height': getHeightBetweenMin(timeSlot.start, timeSlot.end) + "px", top: getAbsoluteTop(event.start, timeSlot.start)}}>
                         <a className="schedule__game-link" href="#"/>
                       </div>
                     ), this)

@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/schedules",
+      "path": "/api/schedules",
       "handler": "schedule.find",
       "config": {
         "policies": []
@@ -10,7 +10,7 @@
     },
     {
       "method": "GET",
-      "path": "/schedules/count",
+      "path": "/api/schedules/count",
       "handler": "schedule.count",
       "config": {
         "policies": []
@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/schedules/:id",
+      "path": "/api/schedules/:id",
       "handler": "schedule.findOne",
       "config": {
         "policies": []
@@ -26,7 +26,7 @@
     },
     {
       "method": "POST",
-      "path": "/schedules",
+      "path": "/api/schedules",
       "handler": "schedule.create",
       "config": {
         "policies": []
@@ -34,7 +34,7 @@
     },
     {
       "method": "PUT",
-      "path": "/schedules/:id",
+      "path": "/api/schedules/:id",
       "handler": "schedule.update",
       "config": {
         "policies": []
@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/schedules/:id",
+      "path": "/api/schedules/:id",
       "handler": "schedule.delete",
       "config": {
         "policies": []
