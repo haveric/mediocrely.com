@@ -62,6 +62,25 @@
     width: 100%;
 }
 
+.schedule__rows-inn {
+    position: relative;
+}
+
+.schedule__currentTime {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid orangered;
+    border-bottom: 1px solid orangered;
+    z-index: 20;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
 .schedule__row {
     height: 63px;
     margin-bottom: 5px;
