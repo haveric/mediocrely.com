@@ -3,16 +3,49 @@ import PropTypes from 'prop-types';
 import DateUtils from '../../utils/DateUtil';
 import {Container} from '../Base/Container';
 import './Schedule.scss';
+import ScheduleModal from "./ScheduleModal";
 
 export class Schedule extends React.Component {
     constructor(props) {
         super(props);
+        const self = this;
 
         this.state = {
             activeTab: "1",
             showCurrentTime: false,
             currentTimeTop: 0,
-            error: null
+            error: null,
+            showScheduleModal: false,
+            scheduleModalIsVisible: false,
+            scheduleModalGame: null
+        };
+
+        this.scheduleModal = React.createRef();
+
+        this.hideScheduleModal = e => {
+            if (self.state.scheduleModalIsVisible) {
+                if (self.scheduleModal && !self.scheduleModal.current.contains(e.target)) {
+                    self.setState({
+                        showScheduleModal: false,
+                        scheduleModalIsVisible: false
+                    });
+                }
+            }
+        };
+
+        this.showScheduleModal = (e, game) => {
+            if (!self.state.scheduleModalIsVisible) {
+                self.setState({
+                    showScheduleModal: true,
+                    scheduleModalGame: game
+                });
+
+                setTimeout(() => {
+                    self.setState({
+                        scheduleModalIsVisible: true
+                    });
+                }, 20);
+            }
         };
     }
 
@@ -21,6 +54,12 @@ export class Schedule extends React.Component {
 
         this.checkCurrentTime(event);
         this.startCurrentTimeTimer(event);
+
+        document.addEventListener('click', this.hideScheduleModal, false);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('click', this.hideScheduleModal, false);
     }
 
     checkCurrentTime(event) {
@@ -108,8 +147,9 @@ export class Schedule extends React.Component {
             );
         });
 
-
         return (
+            <>
+            <ScheduleModal ref={this.scheduleModal} show={this.state.showScheduleModal} game={this.state.scheduleModalGame}/>
             <div id="schedule" className="schedule">
                 <Container>
                     <div className="schedule__header clearfix">
@@ -152,8 +192,10 @@ export class Schedule extends React.Component {
                                                 height: getHeightBetween(timeSlot.start, timeSlot.end) + "px",
                                                 '--height': getHeightBetweenMin(timeSlot.start, timeSlot.end) + "px",
                                                 top: getAbsoluteTop(event.start, timeSlot.start)
-                                            }}>
-                                                <a className="schedule__game-link" href="#"/>
+                                            }}
+                                            onClick={(e => {
+                                                this.showScheduleModal(e, timeSlot.game);
+                                            })}>
                                             </div>
                                         ), this)
                                     }
@@ -167,6 +209,7 @@ export class Schedule extends React.Component {
                     </div>
                 </Container>
             </div>
+            </>
         );
     }
 }

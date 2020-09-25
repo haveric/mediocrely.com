@@ -157,15 +157,8 @@
         width: calc(var(--height) * 92/43);
         height: var(--height) !important;
         outline: 5px solid #fff;
+        cursor: pointer;
     }
-}
-
-.schedule__game-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #000;
-    box-sizing: border-box;
 }
 
 .schedule__game-image {
