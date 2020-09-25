@@ -1,5 +1,22 @@
 .info-carousel {
     background-color: #000;
+
+    .slick-prev,
+    .slick-next {
+        z-index: 20;
+    }
+
+    .slick-prev {
+        @media screen and (max-width: 1270px) {
+            left: 10px;
+        }
+    }
+
+    .slick-next {
+        @media screen and (max-width: 1270px) {
+            right: 10px;
+        }
+    }
 }
 
 .info-carousel__slide {
