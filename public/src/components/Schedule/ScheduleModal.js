@@ -26,18 +26,24 @@ class ScheduleModal extends React.Component {
                     <div className="schedule-modal__links">
                         {
                             game.websiteUrl ?
-                                <a className="schedule-modal__link" href={game.websiteUrl}/>
+                                <a className="schedule-modal__link" href={game.websiteUrl} target="_blank">
+                                    <img src="/icons/link.svg" />
+                                </a>
                             : ""
                         }
                         {
                             game.steamUrl ?
-                                <a className="schedule-modal__link" href={game.steamUrl}/>
-                                : ""
+                                <a className="schedule-modal__link" href={game.steamUrl} target="_blank">
+                                    <img src="/icons/steam.svg" />
+                                </a>
+                            : ""
                         }
                         {
                             game.epicUrl ?
-                                <a className="schedule-modal__link" href={game.epicUrl}/>
-                                : ""
+                                <a className="schedule-modal__link" href={game.epicUrl} target="_blank">
+                                    <img src="/icons/epicgames.svg" />
+                                </a>
+                            : ""
                         }
                     </div>
                 </div>
