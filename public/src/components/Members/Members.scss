@@ -3,8 +3,15 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 45px 0;
     position: relative;
+
+    @media screen and (min-width: 1071px) {
+        padding: 45px 15px;
+    }
+
+    @media screen and (max-width: 1070px) {
+        padding: 25px 2%;
+    }
 
     &:before {
         content: "";
@@ -44,7 +51,7 @@
 }
 
 .member {
-    padding: 30px 0;
+    padding: 30px ((25 / 1200) * 100%);
     position: relative;
 
     & + .member {
@@ -53,15 +60,29 @@
 }
 
 .member__icon {
-    width: 8.33333333333333%;
+    width: 50px;
     float: left;
     text-align: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .member__details {
-    width: 51.85185185185185%;
-    margin-right: 1.851851851851852%;
     float: left;
+
+    @media screen and (min-width: 1201px) {
+        width: calc(((670 / 1100) * 100%) - 50px);
+        margin-left: ((20 / 1100) * 100%);
+        margin-right: ((20 / 1100) * 100%);
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: calc(100% - 65px);
+        margin-left: 15px;
+    }
 }
 
 .member__name {
@@ -93,8 +114,15 @@
 }
 
 .member__inplay {
-    width: 37.96296296296296%;
     float: left;
+
+    @media screen and (min-width: 1201px) {
+        width: ((390 / 1100) * 100%);
+    }
+
+    @media screen and (max-width: 1200px) {
+
+    }
 }
 
 .member__donate {

@@ -29,9 +29,26 @@
 
 .info-carousel__slide-cta {
     position: absolute;
-    bottom: 18%;
     left: 0;
     right: 0;
     display: table;
     margin: 0 auto;
+
+    @media screen and (min-width: 769px) {
+        bottom: 18%;
+    }
+
+    @media screen and (max-width: 768px) {
+        bottom: 5%;
+    }
+
+    .cta-link {
+        @media screen and (max-width: 768px) {
+            width: 96px;
+            height: 33px;
+            background-size: contain;
+            padding-top: 12px;
+            font-size: 15px;
+        }
+    }
 }

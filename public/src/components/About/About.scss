@@ -1,14 +1,36 @@
 .about {
     background-image: url("/img/dotted_grid.png");
     background-repeat: repeat;
-    padding: 45px 0;
+
+    @media screen and (min-width: 801px) {
+        padding: 45px 0;
+    }
+
+    @media screen and (max-width: 800px) {
+        padding: 25px 0;
+    }
 }
 
 .about__split {
-    width: 48.14814814814815%;
-    padding-left: 0.92592592592593%;
-    padding-right: 0.92592592592593%;
-    float: left;
+    @media screen and (min-width: 801px) {
+        width: 48.14814814814815%;
+        padding-left: 0.92592592592593%;
+        padding-right: 0.92592592592593%;
+        float: left;
+    }
+
+    @media screen and (max-width: 800px) {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    + .about__split {
+        @media screen and (max-width: 800px) {
+            border-top: 2px dashed #ccc;
+            padding-top: 25px;
+            margin-top: 25px;
+        }
+    }
 }
 
 .about__title {

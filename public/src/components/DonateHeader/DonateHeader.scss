@@ -1,21 +1,33 @@
 .donate-header {
     background-color: #4174ba;
-    height: 90px;
+    min-height: 90px;
 }
 
 .donate-header__text {
     font-family: Furore;
     font-size: 24px;
     color: #fff;
-    width: 42.59259259259259%;
-    float: left;
     text-align: center;
-    padding-top: 25px;
+
+    @media screen and (min-width: 1201px) {
+        width: 42.59259259259259%;
+        float: left;
+        padding-top: 25px;
+    }
+    @media screen and (max-width: 1200px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 .donate-header__donate {
-    width: 14.81481481481481%;
-    float: left;
     text-align: center;
-    padding-top: 15px;
+
+    @media screen and (min-width: 1201px) {
+        width: 14.81481481481481%;
+        float: left;
+        padding-top: 15px;
+    }
+    @media screen and (max-width: 1200px) {
+    }
 }
