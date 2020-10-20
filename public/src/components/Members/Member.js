@@ -61,15 +61,19 @@ class Member extends React.Component {
           </div>
           <div className="member__inplay">
               <div className={"twitchembed-" + streamer.twitchHandle}/>
-                <TwitchEmbed
-                    channel={streamer.twitchHandle}
-                    id={streamer.twitchHandle}
-                    width="390px"
-                    height="219px"
-                    theme="dark"
-                    withChat={false}
-                    muted
-                />
+              {
+                  streamer.twitchHandle ?
+                      <TwitchEmbed
+                          channel={streamer.twitchHandle}
+                          id={streamer.twitchHandle}
+                          width="390px"
+                          height="219px"
+                          theme="dark"
+                          withChat={false}
+                          muted
+                      />
+                  : ''
+              }
           </div>
       </div>
     );
