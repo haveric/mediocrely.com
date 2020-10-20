@@ -31,6 +31,9 @@
     },
     "twitchHandle": {
       "type": "string"
+    },
+    "extraLifeUserId": {
+      "type": "integer"
     }
   }
 }
