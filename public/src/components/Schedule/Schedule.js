@@ -52,8 +52,9 @@ export class Schedule extends React.Component {
     componentDidMount() {
         const event = this.props.event;
 
-        this.checkCurrentTime(event);
-        this.startCurrentTimeTimer(event);
+        //TODO: These don't take into account timezones
+        //this.checkCurrentTime(event);
+        //this.startCurrentTimeTimer(event);
 
         document.addEventListener('click', this.hideScheduleModal, false);
     }
@@ -63,12 +64,12 @@ export class Schedule extends React.Component {
     }
 
     checkCurrentTime(event) {
-        const now = new Date(2020, 10, 7, 22);
+        const now = new Date();
 
         const start = new Date(event.start);
         const end = new Date(event.end);
 
-        //if (now >= start && now <= end) {
+        if (now >= start && now <= end) {
             this.setState({
                 showCurrentTime: true
             });
@@ -76,7 +77,7 @@ export class Schedule extends React.Component {
             this.setState({
                 currentTimeTop: ((now - start) / (end - start) * 100) + "%"
             });
-        //}
+        }
     }
 
     startCurrentTimeTimer(event) {
