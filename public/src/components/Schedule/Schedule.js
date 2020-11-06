@@ -68,7 +68,7 @@ export class Schedule extends React.Component {
         const start = new Date(event.start);
         const end = new Date(event.end);
 
-        if (now >= start && now <= end) {
+        //if (now >= start && now <= end) {
             this.setState({
                 showCurrentTime: true
             });
@@ -76,7 +76,7 @@ export class Schedule extends React.Component {
             this.setState({
                 currentTimeTop: ((now - start) / (end - start) * 100) + "%"
             });
-        }
+        //}
     }
 
     startCurrentTimeTimer(event) {
