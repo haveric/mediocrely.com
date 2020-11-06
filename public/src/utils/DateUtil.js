@@ -63,7 +63,7 @@ export default class DateUtils {
 
     return timezoneDisplay;
     */
-    return timezone;
+    return "";
   }
 
   static resetLastTimezone() {
