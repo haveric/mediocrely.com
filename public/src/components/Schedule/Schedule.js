@@ -63,7 +63,7 @@ export class Schedule extends React.Component {
     }
 
     checkCurrentTime(event) {
-        const now = new Date();
+        const now = new Date(2020, 11, 7, 22);
 
         const start = new Date(event.start);
         const end = new Date(event.end);
