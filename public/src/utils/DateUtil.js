@@ -52,6 +52,8 @@ export default class DateUtils {
   }
 
   static getTimeZoneDisplay(timezone) {
+    // Don't use hardcoded timezones
+    /*
     let timezoneDisplay = "";
     if (timezone === 300) {
       timezoneDisplay = " (CDT)";
@@ -60,6 +62,8 @@ export default class DateUtils {
     }
 
     return timezoneDisplay;
+    */
+    return timezone;
   }
 
   static resetLastTimezone() {
