@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "express": "4.17.1",
-    "razzle": "3.1.7",
+    "razzle": "3.4.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "5.2.0",
@@ -20,7 +20,7 @@
     "axios": "^0.20.0",
     "extra-life-api": "^6.0.0",
     "prop-types": "^15.7.2",
-    "razzle-plugin-scss": "^3.1.7",
+    "razzle-plugin-scss": "^3.4.5",
     "react-html-parser": "^2.0.2",
     "react-slick": "^0.27.11",
     "slick-carousel": "^1.8.1"
