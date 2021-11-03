@@ -8,11 +8,11 @@
   "attributes": {
     "start": {
       "type": "datetime",
-      "default": "2020-11-07T18:00:00.000Z"
+      "default": "2021-11-06T18:00:00.000Z"
     },
     "end": {
       "type": "datetime",
-      "default": "2020-11-07T18:00:00.000Z"
+      "default": "2021-11-06T18:00:00.000Z"
     },
     "game": {
       "model": "game"
