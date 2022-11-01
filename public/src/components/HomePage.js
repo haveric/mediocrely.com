@@ -10,7 +10,7 @@ import '../scss/h5bp/normalize.scss';
 import '../scss/h5bp/main.scss';
 import axios from "axios";
 
-export class Home extends Component {
+export class HomePage extends Component {
   constructor(props) {
     super(props);
 
@@ -53,7 +53,7 @@ export class Home extends Component {
     }
   }
 
-  static displayName = Home.name;
+  static displayName = HomePage.name;
 
   render () {
     return (

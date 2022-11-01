@@ -13,7 +13,9 @@
     "build:prod": "NODE_ENV=production strapi build",
     "start:prod": "NODE_ENV=production strapi start"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
   "dependencies": {
     "knex": "^0.20.0",
     "pg": "latest",
