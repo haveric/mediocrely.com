@@ -32,6 +32,7 @@
 .schedule__col {
     flex-grow: 1;
     position: relative;
+    max-width: 30%;
 
     & + .schedule__col {
         margin-left: 20px;
